@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		070AA45725C44276005D8814 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 070AA45625C44276005D8814 /* libz.tbd */; };
+		070AA46025C485FF005D8814 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 070AA45F25C485FF005D8814 /* main.m */; };
+		070AA46525C48796005D8814 /* JD.m in Sources */ = {isa = PBXBuildFile; fileRef = 070AA46425C48796005D8814 /* JD.m */; };
+		070AA46625C48796005D8814 /* JD.m in Sources */ = {isa = PBXBuildFile; fileRef = 070AA46425C48796005D8814 /* JD.m */; };
+		070AA46825C48891005D8814 /* JD.h in Sources */ = {isa = PBXBuildFile; fileRef = 070AA46725C48820005D8814 /* JD.h */; };
 		4AB889351994ABC9004DC0FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB889341994ABC9004DC0FD /* Foundation.framework */; };
 		4AB889381994ABC9004DC0FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB889371994ABC9004DC0FD /* main.m */; };
 		4AB889601994B0E0004DC0FD /* libzipzap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB889561994B0E0004DC0FD /* libzipzap.a */; };
-		4AB889671994B1B5004DC0FD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB889661994B1B5004DC0FD /* libz.dylib */; };
 		4AB889691994B1C6004DC0FD /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB889681994B1C6004DC0FD /* ImageIO.framework */; };
 		4AB8896B1994B1D2004DC0FD /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB8896A1994B1D2004DC0FD /* ApplicationServices.framework */; };
 		4AC3237825C2BCFD00B3C3DB /* NSTask+function.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC3237725C2BCFD00B3C3DB /* NSTask+function.m */; };
@@ -18,6 +22,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		070AA45B25C485FF005D8814 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		4AB8892F1994ABC9004DC0FD /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -30,6 +43,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		070AA45625C44276005D8814 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		070AA45825C4853A005D8814 /* wl.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = wl.json; sourceTree = "<group>"; };
+		070AA45D25C485FF005D8814 /* JD */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = JD; sourceTree = BUILT_PRODUCTS_DIR; };
+		070AA45F25C485FF005D8814 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		070AA46425C48796005D8814 /* JD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JD.m; sourceTree = "<group>"; };
+		070AA46725C48820005D8814 /* JD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JD.h; sourceTree = "<group>"; };
 		4AA7945219C84CAB001ECD48 /* cda2mwl.xsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = cda2mwl.xsl; sourceTree = "<group>"; };
 		4AB889311994ABC9004DC0FD /* cdawldicom */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cdawldicom; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AB889341994ABC9004DC0FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -40,7 +59,6 @@
 		4AB8894D1994B0E0004DC0FD /* ZZConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZConstants.h; sourceTree = "<group>"; };
 		4AB8894E1994B0E0004DC0FD /* ZZError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZError.h; sourceTree = "<group>"; };
 		4AB889561994B0E0004DC0FD /* libzipzap.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzipzap.a; sourceTree = "<group>"; };
-		4AB889661994B1B5004DC0FD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		4AB889681994B1C6004DC0FD /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		4AB8896A1994B1D2004DC0FD /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
 		4AB8896C1994BCE5004DC0FD /* cda2mwl */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = cda2mwl; sourceTree = "<group>"; };
@@ -55,12 +73,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		070AA45A25C485FF005D8814 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4AB8892E1994ABC9004DC0FD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				070AA45725C44276005D8814 /* libz.tbd in Frameworks */,
 				4AB889601994B0E0004DC0FD /* libzipzap.a in Frameworks */,
-				4AB889671994B1B5004DC0FD /* libz.dylib in Frameworks */,
 				4AB889691994B1C6004DC0FD /* ImageIO.framework in Frameworks */,
 				4AB8896B1994B1D2004DC0FD /* ApplicationServices.framework in Frameworks */,
 				4AB889351994ABC9004DC0FD /* Foundation.framework in Frameworks */,
@@ -70,9 +95,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		070AA45E25C485FF005D8814 /* JD */ = {
+			isa = PBXGroup;
+			children = (
+				070AA45825C4853A005D8814 /* wl.json */,
+				070AA45F25C485FF005D8814 /* main.m */,
+			);
+			path = JD;
+			sourceTree = "<group>";
+		};
 		4AB889281994ABC9004DC0FD = {
 			isa = PBXGroup;
 			children = (
+				070AA46725C48820005D8814 /* JD.h */,
+				070AA46425C48796005D8814 /* JD.m */,
 				4AB889371994ABC9004DC0FD /* main.m */,
 				4AC3237D25C30AB800B3C3DB /* ODLog.h */,
 				4AC3237C25C30AB800B3C3DB /* ODLog.m */,
@@ -82,6 +118,7 @@
 				4AB889491994B0E0004DC0FD /* include */,
 				4AB8894F1994B0E0004DC0FD /* lib */,
 				4AC3237525C2BC8F00B3C3DB /* category */,
+				070AA45E25C485FF005D8814 /* JD */,
 				4AB889331994ABC9004DC0FD /* Frameworks */,
 				4AB889321994ABC9004DC0FD /* Products */,
 			);
@@ -91,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				4AB889311994ABC9004DC0FD /* cdawldicom */,
+				070AA45D25C485FF005D8814 /* JD */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,9 +136,9 @@
 		4AB889331994ABC9004DC0FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				070AA45625C44276005D8814 /* libz.tbd */,
 				4AB8896A1994B1D2004DC0FD /* ApplicationServices.framework */,
 				4AB889681994B1C6004DC0FD /* ImageIO.framework */,
-				4AB889661994B1B5004DC0FD /* libz.dylib */,
 				4AB889341994ABC9004DC0FD /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -152,6 +190,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		070AA45C25C485FF005D8814 /* JD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 070AA46125C485FF005D8814 /* Build configuration list for PBXNativeTarget "JD" */;
+			buildPhases = (
+				070AA45925C485FF005D8814 /* Sources */,
+				070AA45A25C485FF005D8814 /* Frameworks */,
+				070AA45B25C485FF005D8814 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JD;
+			productName = JD;
+			productReference = 070AA45D25C485FF005D8814 /* JD */;
+			productType = "com.apple.product-type.tool";
+		};
 		4AB889301994ABC9004DC0FD /* cdawldicom */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4AB8893F1994ABC9004DC0FD /* Build configuration list for PBXNativeTarget "cdawldicom" */;
@@ -177,6 +232,12 @@
 			attributes = {
 				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = saluduy;
+				TargetAttributes = {
+					070AA45C25C485FF005D8814 = {
+						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 4AB8892C1994ABC9004DC0FD /* Build configuration list for PBXProject "cdawldicom" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -192,16 +253,28 @@
 			projectRoot = "";
 			targets = (
 				4AB889301994ABC9004DC0FD /* cdawldicom */,
+				070AA45C25C485FF005D8814 /* JD */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		070AA45925C485FF005D8814 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				070AA46825C48891005D8814 /* JD.h in Sources */,
+				070AA46625C48796005D8814 /* JD.m in Sources */,
+				070AA46025C485FF005D8814 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4AB8892D1994ABC9004DC0FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4AC3237E25C30AB800B3C3DB /* ODLog.m in Sources */,
+				070AA46525C48796005D8814 /* JD.m in Sources */,
 				4AB889381994ABC9004DC0FD /* main.m in Sources */,
 				4AC3237825C2BCFD00B3C3DB /* NSTask+function.m in Sources */,
 			);
@@ -210,6 +283,43 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		070AA46225C485FF005D8814 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		070AA46325C485FF005D8814 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		4AB8893D1994ABC9004DC0FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -337,6 +447,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		070AA46125C485FF005D8814 /* Build configuration list for PBXNativeTarget "JD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				070AA46225C485FF005D8814 /* Debug */,
+				070AA46325C485FF005D8814 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4AB8892C1994ABC9004DC0FD /* Build configuration list for PBXProject "cdawldicom" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

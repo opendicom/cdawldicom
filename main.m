@@ -16,6 +16,7 @@
 
 #import "NSTask+function.h"
 
+
 int main(int argc, const char * argv[])
 {
     @autoreleasepool {
@@ -131,10 +132,17 @@ int main(int argc, const char * argv[])
                                             }
                                             else
                                             {
-                                                if (![mwlitemjson isKindOfClass:[NSData class]]) LOG_ERROR(@"ERROR xslt1 cda2mwl didn´t output a text file");
+                                                if (![mwlitemjson isKindOfClass:[NSData class]]) LOG_ERROR(@"ERROR xslt1 cda2mwl didn´t output data file");
                                                 else
                                                 {
                                                    //serialize it to dicom
+                                                    NSDictionary *json=[NSJSONSerialization JSONObjectWithData:mwlitemjson options:0 error:&error];
+                                                    if (!json)  LOG_ERROR(@"ERROR reading json: %@",[error description]);
+                                                    else
+                                                    {
+                                                        NSMutableData *dicom=[NSMutableData data];
+                                                        JD(json, dicom);
+                                                    }
                                                 }
                                             }
                                         }
