@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>uy.salud.cda2mwl</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Users/shared/cda2mwl/apps/cda2mwl/bin/cda2mwl</string>
+		<string>http://10.255.6.50:8080/dcm4chee-arc/qido/DCM4CHEE/instances?Modality=OT&amp;00080080=asseTyT&amp;SeriesDescription=solicitud&amp;NumberOfStudyRelatedInstances=1&amp;StudyDate=</string>
+		<string>/Users/Shared/cda2mwl/audit/</string>
+		<string>/Applications/dcm4che-3.3.7/bin/hl7snd</string>
+		<string>-c</string>
+		<string>localhost:12575</string>
+		<string>-</string>
+	</array>
+	<key>StartInterval</key>
+	<integer>60</integer>
+</dict>
+</plist>
