@@ -9,18 +9,6 @@
 /*
  TODO
  
- Encodings
- 
- charSetsDicom ()
- charSetsObjectiveC
- charSets contain corresponding lists of available encodings.
- the VR part is 4 bytes:
- - (1) year in the 21th century
- - (1) rank in http://dicom.nema.org/medical/dicom/current/output/chtml/part02/sect_D.6.2.html#table_D.6.2-1
- - (2) VR
- 
-  
- 
  urls
  at root level : base url
  in binary attributes:
@@ -30,53 +18,6 @@
  8 byte OD, OV, FD, SV and UV
  */
 
-/*
- Encodings
- 
- 
- 
- 
- Support of Character Repertoires
- Values that are text or character strings can be composed of Graphic and Control Characters. The Graphic Character set, independent of its encoding, is referred to as a Character Repertoire. Depending on the native language context in which Application Entities wish to exchange data using the DICOM Standard, different Character Repertoires will be used. The Character Repertoires supported by DICOM are:
-
- ISO 8859
-
- JIS X 0201-1976 Code for Information Interchange
-
- JIS X 0208-1990 Code for the Japanese Graphic Character set for information interchange
-
- JIS X 0212-1990 Code of the supplementary Japanese Graphic Character set for information interchange
-
- KS X 1001 (registered as ISO-IR 149) for Korean Language
-
- TIS 620-2533 (1990) Thai Characters Code for Information Interchange
-
- ISO 10646-1, 10646-2, and their associated supplements and extensions for Unicode character set
-
- GB 18030
-
- GB2312
-
- GBK
-
- Note
- The ISO 10646-1, 10646-2, and their associated supplements and extensions correspond to the Unicode version 3.2 character set. The ISO IR 192 corresponds to the use of the UTF-8 encoding for this character set.
-
- The GB 18030 character set is harmonized with the Unicode character set on a regular basis, to reflect updates from both the Chinese language and from Unicode extensions to support other languages.
-
- The issue of font selection is not addressed by the DICOM Standard. Issues such as proper display of words like "bone" in Chinese or Japanese usage are managed through font selection. Similarly, other user interface issues like bidirectional character display and text orientation are not addressed by the DICOM Standard. The Unicode documents provide extensive documentation on these issues.
-
- The GBK character set is an extension of the GB 2312-1980 character set and supports the Chinese characters in GB 13000.1-93 that is the Chinese adaptation of Unicode 1.1. The GBK is code point backward compatible to GB2312-1980. The GB 18030 character set is an extension of the GBK character set for support of Unicode 3.2, and provides backward code point compatibility.
- 
- The default repertoire for character strings in DICOM shall be the Basic G0 Set of the International Reference Version of ISO 646:1990 (ISO-IR 6). See Annex E for a table of the DICOM default repertoire and its encoding.
-
- Note
- This Basic G0 Set is identical with the common character set of ISO 8859.
-
- For Data Elements with Value Representations of SH (Short String), LO (Long String), UC (Unlimited Characters), ST (Short Text), LT (Long Text), UT (Unlimited Text) or PN (Person Name) the Default Character Repertoire may be extended or replaced (these Value Representations are described in more detail in Section 6.2). If such an extension or replacement is used, the relevant "Specific Character Set" shall be defined as an attribute of the SOP Common Module (0008,0005)
- 
- Preferred repertoires as defined in ENV 41 503 and ENV 41 508 for the use in Western and Eastern Europe, respectively, are: ISO-IR 100, ISO-IR 101, ISO-IR 144, ISO-IR 126.
- */
 
 
 #import <Foundation/Foundation.h>
@@ -117,52 +58,109 @@ uint32 shortshortFromFourByteHexaString(NSString *string)
    ;
 }
 
+
+/*
+ Encodings
+ 
+ the VR part is 4 bytes:
+ - (2) rank in http://dicom.nema.org/medical/dicom/current/output/chtml/part02/sect_D.6.2.html#table_D.6.2-1
+ - (2) VR
+  
+ Support of Character Repertoires
+ Values that are text or character strings can be composed of Graphic and Control Characters. The Graphic Character set, independent of its encoding, is referred to as a Character Repertoire. Depending on the native language context in which Application Entities wish to exchange data using the DICOM Standard, different Character Repertoires will be used. The Character Repertoires supported by DICOM are:
+
+ 00       not available
+ 
+ 8[0-15]  ISO 10646-1, 10646-2, and their associated supplements and extensions for Unicode character set
+
+ A0       ASCII
+ 
+ B[0-15]  ISO 8859
+
+ C0       GB 18030
+ C1       GB2312
+ C2       GBK
+
+ D0       JIS X 0201-1976 Information Interchange
+ D1       JIS X 0208-1990 Japanese Graphic Character set for information interchange
+ D2       JIS X 0212-1990 supplementary Japanese Graphic Character set for information interchange
+
+ E0       KS X 1001 (registered as ISO-IR 149) for Korean Language
+
+ F0       TIS 620-2533 (1990) Thai Characters Code for Information Interchange
+
+ 
+ Note
+ The ISO 10646-1, 10646-2, and their associated supplements and extensions correspond to the Unicode version 3.2 character set. The ISO IR 192 corresponds to the use of the UTF-8 encoding for this character set.
+
+ The GB 18030 character set is harmonized with the Unicode character set on a regular basis, to reflect updates from both the Chinese language and from Unicode extensions to support other languages.
+
+ The issue of font selection is not addressed by the DICOM Standard. Issues such as proper display of words like "bone" in Chinese or Japanese usage are managed through font selection. Similarly, other user interface issues like bidirectional character display and text orientation are not addressed by the DICOM Standard. The Unicode documents provide extensive documentation on these issues.
+
+ The GBK character set is an extension of the GB 2312-1980 character set and supports the Chinese characters in GB 13000.1-93 that is the Chinese adaptation of Unicode 1.1. The GBK is code point backward compatible to GB2312-1980. The GB 18030 character set is an extension of the GBK character set for support of Unicode 3.2, and provides backward code point compatibility.
+ 
+ The default repertoire for character strings in DICOM shall be the Basic G0 Set of the International Reference Version of ISO 646:1990 (ISO-IR 6). See Annex E for a table of the DICOM default repertoire and its encoding.
+
+ Note
+ This Basic G0 Set is identical with the common character set of ISO 8859.
+
+ For Data Elements with Value Representations of SH (Short String), LO (Long String), UC (Unlimited Characters), ST (Short Text), LT (Long Text), UT (Unlimited Text) or PN (Person Name) the Default Character Repertoire may be extended or replaced (these Value Representations are described in more detail in Section 6.2). If such an extension or replacement is used, the relevant "Specific Character Set" shall be defined as an attribute of the SOP Common Module (0008,0005)
+ 
+ Preferred repertoires as defined in ENV 41 503 and ENV 41 508 for the use in Western and Eastern Europe, respectively, are: ISO-IR 100, ISO-IR 101, ISO-IR 144, ISO-IR 126.
+ */
+
 //http://dicom.nema.org/medical/dicom/current/output/chtml/part02/sect_D.6.2.html#table_D.6.2-1
+//https://en.wikipedia.org/wiki/ISO/IEC_8859
+
+//first char
+//0 = ISO/IEC 8859
+//8 = UTF-8
+
+//second char
+//part in ISO/IEC 8859
 NSString *charSetsDicom[]={
-   @"ISO_IR 100",      //8859-1 (latin 1)
-   @"ISO_IR 101",      //8859-2 (latin 2)
-   @"ISO_IR 109",      //8859-3 (latin 3)
-   @"ISO_IR 110",      //8859-4 (latin 4)
-   @"ISO_IR 144",      //(Cyrillic)
-   @"ISO_IR 127",      //(Arabic)
-   @"ISO_IR 126",      //(Greek)
-   @"ISO_IR 138",      //(Hebrew)
-   @"ISO_IR 148",      //(latin 5)
+   
+   @"ISO 2022 IR 6",   //A0 ASCII(Default repertoire) NSASCIIStringEncoding
+
+   @"ISO_IR 100",      //01 8859-1 (latin 1) NSISOLatin1StringEncoding
+   @"ISO_IR 101",      //02 8859-2 (latin 2) NSISOLatin2StringEncoding
+   @"ISO_IR 109",      //03 8859-3 (latin 3)
+   @"ISO_IR 110",      //04 8859-4 (latin 4)
+   @"ISO_IR 144",      //05 (Cyrillic) NSWindowsCP1251StringEncoding
+   @"ISO_IR 127",      //06 (Arabic)
+   @"ISO_IR 126",      //07 (Greek) NSWindowsCP1253StringEncoding
+   @"ISO_IR 138",      //08 (Hebrew)
+   @"ISO_IR 148",      //09 (latin 5,turkish)
+                       //0A (latin 6, nordic)
+   @"ISO_IR 166",      //0B (Thai)
+                       //0C abandonned
+                       //0D baltic-rim (latin 7)
+                       //0E celtic (latin 8)
+                       //0F revision of latin 1 (latin 9)
+                       //00 south eastern european (latin 10)
+
+
+   @"ISO 2022 IR 100", //81 UTF-8 (latin 1)
+   @"ISO 2022 IR 101", //82 UTF-8 (latin 2)
+   @"ISO 2022 IR 109", //83 UTF-8 (latin 3)
+   @"ISO 2022 IR 110", //84 UTF-8 (latin 4)
+   @"ISO 2022 IR 144", //85 (Cyrillic)
+   @"ISO 2022 IR 127", //86 (Arabic)
+   @"ISO 2022 IR 126", //87 (Greek)
+   @"ISO 2022 IR 138", //88 (Hebrew)
+   @"ISO 2022 IR 148", //89 (latin 5)
+   
+   
    @"ISO_IR 13",       //(Japanese)
-   @"ISO 2022 IR 6",   //ASCII(Default repertoire)
-   @"ISO_IR 166",      //(Thai)
-   @"ISO 2022 IR 100", //UTF-8 (latin 1)
-   @"ISO 2022 IR 101", //UTF-8 (latin 2)
-   @"ISO 2022 IR 109", //UTF-8 (latin 3)
-   @"ISO 2022 IR 110", //UTF-8 (latin 4)
-   @"ISO 2022 IR 144", //(Cyrillic)
-   @"ISO 2022 IR 127", //(Arabic)
-   @"ISO 2022 IR 126", //(Greek)
-   @"ISO 2022 IR 138", //(Hebrew)
-   @"ISO 2022 IR 148", //(Latin alphabet No. 5)
-   @"ISO 2022 IR 13", //(Japanese)
+   @"ISO 2022 IR 13", //(Japanese) NSISO2022JPStringEncoding
    @"ISO 2022 IR 166", //(Thai)
    @"ISO 2022 IR 87", //(Japanese)
    @"ISO 2022 IR 159", //(Japanese)
    @"ISO 2022 IR 149" //(Korean)
+
 };
 
-NSUInteger charSetsObjectiveC[]={
-   NSASCIIStringEncoding,
-   NSISOLatin1StringEncoding,//latin1
-   NSISOLatin2StringEncoding,//latin2
-   0,//latin3
-   0,//latin4
-   NSWindowsCP1251StringEncoding,//cyrilic
-   0,//arabic
-   NSWindowsCP1253StringEncoding,//greek
-   0,
-   0,
-   0,
-   NSISO2022JPStringEncoding,//japenese
-   0,
-   NSASCIIStringEncoding
-};
+
 
 void JD(NSDictionary *J, NSMutableData *D)
 {
