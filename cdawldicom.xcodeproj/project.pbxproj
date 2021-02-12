@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		070AA45725C44276005D8814 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 070AA45625C44276005D8814 /* libz.tbd */; };
 		070AA46025C485FF005D8814 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 070AA45F25C485FF005D8814 /* main.m */; };
-		070AA46525C48796005D8814 /* JD.m in Sources */ = {isa = PBXBuildFile; fileRef = 070AA46425C48796005D8814 /* JD.m */; };
 		070AA46625C48796005D8814 /* JD.m in Sources */ = {isa = PBXBuildFile; fileRef = 070AA46425C48796005D8814 /* JD.m */; };
 		070AA46825C48891005D8814 /* JD.h in Sources */ = {isa = PBXBuildFile; fileRef = 070AA46725C48820005D8814 /* JD.h */; };
+		070AA47125D47928005D8814 /* JD.h in Sources */ = {isa = PBXBuildFile; fileRef = 070AA46725C48820005D8814 /* JD.h */; };
+		070AA47225D4792A005D8814 /* JD.m in Sources */ = {isa = PBXBuildFile; fileRef = 070AA46425C48796005D8814 /* JD.m */; };
 		4AB889351994ABC9004DC0FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB889341994ABC9004DC0FD /* Foundation.framework */; };
 		4AB889381994ABC9004DC0FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB889371994ABC9004DC0FD /* main.m */; };
 		4AB889601994B0E0004DC0FD /* libzipzap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB889561994B0E0004DC0FD /* libzipzap.a */; };
@@ -49,6 +50,8 @@
 		070AA45F25C485FF005D8814 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		070AA46425C48796005D8814 /* JD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JD.m; sourceTree = "<group>"; };
 		070AA46725C48820005D8814 /* JD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JD.h; sourceTree = "<group>"; };
+		070AA46B25C98700005D8814 /* 2.16.858.2.10001442.67430.20210128154923.3548623.8.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = 2.16.858.2.10001442.67430.20210128154923.3548623.8.json; sourceTree = "<group>"; };
+		070AA46C25C98700005D8814 /* org.dcmtk.wlmscpfs.asseMALDONADO.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = org.dcmtk.wlmscpfs.asseMALDONADO.plist; sourceTree = "<group>"; };
 		4AA7945219C84CAB001ECD48 /* cda2mwl.xsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = cda2mwl.xsl; sourceTree = "<group>"; };
 		4AB889311994ABC9004DC0FD /* cdawldicom */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cdawldicom; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AB889341994ABC9004DC0FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -62,7 +65,7 @@
 		4AB889681994B1C6004DC0FD /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		4AB8896A1994B1D2004DC0FD /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
 		4AB8896C1994BCE5004DC0FD /* cda2mwl */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = cda2mwl; sourceTree = "<group>"; };
-		4AB8896D1994C0B6004DC0FD /* cda2mwl.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cda2mwl.plist; sourceTree = "<group>"; };
+		4AB8896D1994C0B6004DC0FD /* com.opendicom.cdawldicom.asseMaldonado.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = com.opendicom.cdawldicom.asseMaldonado.plist; sourceTree = "<group>"; };
 		4AC3237125C2B9C200B3C3DB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4AC3237625C2BCFD00B3C3DB /* NSTask+function.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTask+function.h"; sourceTree = "<group>"; };
 		4AC3237725C2BCFD00B3C3DB /* NSTask+function.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTask+function.m"; sourceTree = "<group>"; };
@@ -98,23 +101,31 @@
 		070AA45E25C485FF005D8814 /* JD */ = {
 			isa = PBXGroup;
 			children = (
+				070AA46725C48820005D8814 /* JD.h */,
+				070AA46425C48796005D8814 /* JD.m */,
 				070AA45825C4853A005D8814 /* wl.json */,
 				070AA45F25C485FF005D8814 /* main.m */,
 			);
 			path = JD;
 			sourceTree = "<group>";
 		};
+		070AA46925C9839A005D8814 /* ODLog */ = {
+			isa = PBXGroup;
+			children = (
+				4AC3237D25C30AB800B3C3DB /* ODLog.h */,
+				4AC3237C25C30AB800B3C3DB /* ODLog.m */,
+			);
+			path = ODLog;
+			sourceTree = "<group>";
+		};
 		4AB889281994ABC9004DC0FD = {
 			isa = PBXGroup;
 			children = (
-				070AA46725C48820005D8814 /* JD.h */,
-				070AA46425C48796005D8814 /* JD.m */,
+				070AA46925C9839A005D8814 /* ODLog */,
 				4AB889371994ABC9004DC0FD /* main.m */,
-				4AC3237D25C30AB800B3C3DB /* ODLog.h */,
-				4AC3237C25C30AB800B3C3DB /* ODLog.m */,
 				4AC3237B25C2EEFD00B3C3DB /* wlmscpfs.md */,
 				4AC3237125C2B9C200B3C3DB /* README.md */,
-				4AB889641994B12A004DC0FD /* bin */,
+				4AB889641994B12A004DC0FD /* deploy */,
 				4AB889491994B0E0004DC0FD /* include */,
 				4AB8894F1994B0E0004DC0FD /* lib */,
 				4AC3237525C2BC8F00B3C3DB /* category */,
@@ -166,16 +177,18 @@
 			path = cda2mwl/lib;
 			sourceTree = "<group>";
 		};
-		4AB889641994B12A004DC0FD /* bin */ = {
+		4AB889641994B12A004DC0FD /* deploy */ = {
 			isa = PBXGroup;
 			children = (
+				070AA46B25C98700005D8814 /* 2.16.858.2.10001442.67430.20210128154923.3548623.8.json */,
+				070AA46C25C98700005D8814 /* org.dcmtk.wlmscpfs.asseMALDONADO.plist */,
 				4AC3238525C3545700B3C3DB /* solicitud.xml */,
 				4AA7945219C84CAB001ECD48 /* cda2mwl.xsl */,
-				4AB8896D1994C0B6004DC0FD /* cda2mwl.plist */,
+				4AB8896D1994C0B6004DC0FD /* com.opendicom.cdawldicom.asseMaldonado.plist */,
 				4AB8896C1994BCE5004DC0FD /* cda2mwl */,
 			);
-			name = bin;
-			path = cda2mwl/bin;
+			name = deploy;
+			path = cda2mwl/deploy;
 			sourceTree = "<group>";
 		};
 		4AC3237525C2BC8F00B3C3DB /* category */ = {
@@ -274,7 +287,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AC3237E25C30AB800B3C3DB /* ODLog.m in Sources */,
-				070AA46525C48796005D8814 /* JD.m in Sources */,
+				070AA47125D47928005D8814 /* JD.h in Sources */,
+				070AA47225D4792A005D8814 /* JD.m in Sources */,
 				4AB889381994ABC9004DC0FD /* main.m in Sources */,
 				4AC3237825C2BCFD00B3C3DB /* NSTask+function.m in Sources */,
 			);
