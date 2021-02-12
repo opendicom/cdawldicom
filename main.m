@@ -92,7 +92,7 @@ int main(int argc, const char * argv[])
           NSString *EUID=[[[instance objectForKey:@"0020000D"]objectForKey:@"Value"]firstObject];
           NSString *EUIDpath=[DApath stringByAppendingPathComponent:EUID];
           
-          if([fileManager fileExistsAtPath:[EUIDpath stringByAppendingPathComponent:@"wi.xml"]]) continue;//WorkItem (wi.xml) already downloaded
+          if([fileManager fileExistsAtPath:[EUIDpath stringByAppendingPathComponent:@"wl.xml"]]) continue;//WorkItem (wl.xml) already downloaded
           
           if(![fileManager fileExistsAtPath:EUIDpath] && ![fileManager createDirectoryAtPath:EUIDpath withIntermediateDirectories:YES attributes:nil error:nil])
           {
@@ -208,31 +208,31 @@ int main(int argc, const char * argv[])
               NSString *cdapath=[EUIDpath stringByAppendingPathComponent:@"cda.xml"];
               [[xmlDocument XMLData] writeToFile:cdapath atomically:NO];
               
-#pragma mark write wi.json
-              //transform CDA 2 WorkItem (wi) json contextualkey-values
-              id wi = [xmlDocument objectByApplyingXSLT:xslt1Data
+#pragma mark write wl.json
+              //transform CDA 2 WorkItem (wl) json contextualkey-values
+              id wl = [xmlDocument objectByApplyingXSLT:xslt1Data
                                                        arguments:DAargdict
                                                            error:&error];
-              if (!wi)
+              if (!wl)
               {
-                  LOG_WARNING(@"could not transform %@ to wi.json\r%@",cdapath,[error description]);
+                  LOG_WARNING(@"could not transform %@ to wl.json\r%@",cdapath,[error description]);
                   continue;
               }
               
-              if (![wi isKindOfClass:[NSData class]])
+              if (![wl isKindOfClass:[NSData class]])
               {
                   LOG_WARNING(@"xslt1 on %@ did not output data file",cdapath);
                   continue;
               }
 
-              NSString *wipath=[EUIDpath stringByAppendingPathComponent:@"wi.json"];
-              [wi writeToFile:wipath atomically:NO];
+              NSString *wlpath=[EUIDpath stringByAppendingPathComponent:@"wl.json"];
+              [wl writeToFile:wlpath atomically:NO];
 
-#pragma mark serialize wi json data to dicom
-              NSDictionary *json=[NSJSONSerialization JSONObjectWithData:wi options:0 error:&error];
+#pragma mark serialize wl json data to dicom
+              NSDictionary *json=[NSJSONSerialization JSONObjectWithData:wl options:0 error:&error];
               if (!json)
               {
-                  LOG_WARNING(@"ERROR reading %@: %@",wipath,[error description]);
+                  LOG_WARNING(@"ERROR reading %@: %@",wlpath,[error description]);
                   continue;
               }
 
