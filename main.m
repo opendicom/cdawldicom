@@ -59,6 +59,8 @@ int main(int argc, const char * argv[])
      //arg[3] audit path
      NSString *DApath=[[args[3] stringByExpandingTildeInPath] stringByAppendingPathComponent:DA];
      
+     //arg[4] aet
+     NSString *aetscppath=[[[args[3] stringByExpandingTildeInPath]stringByAppendingPathComponent:@"published"] stringByAppendingPathComponent:args[4]];
      
 #pragma mark qido
      NSData *qidoResponse=[NSData dataWithContentsOfURL:qidoURL
@@ -239,7 +241,7 @@ int main(int argc, const char * argv[])
               NSMutableData *dicom=[NSMutableData data];
               JD(json, dicom);
               
-              [dicom writeToFile:[NSString stringWithFormat:@"/Users/Shared/wlmscpfs/aet/DCM4CHE/%@.wl",EUID] atomically:NO];
+              [dicom writeToFile:[NSString stringWithFormat:@"%@/%@.wl",aetscppath,EUID] atomically:NO];
 
           }
      }

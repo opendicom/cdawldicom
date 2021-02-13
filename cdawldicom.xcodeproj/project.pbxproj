@@ -11,7 +11,6 @@
 		070AA46025C485FF005D8814 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 070AA45F25C485FF005D8814 /* main.m */; };
 		070AA46625C48796005D8814 /* JD.m in Sources */ = {isa = PBXBuildFile; fileRef = 070AA46425C48796005D8814 /* JD.m */; };
 		070AA46825C48891005D8814 /* JD.h in Sources */ = {isa = PBXBuildFile; fileRef = 070AA46725C48820005D8814 /* JD.h */; };
-		070AA47125D47928005D8814 /* JD.h in Sources */ = {isa = PBXBuildFile; fileRef = 070AA46725C48820005D8814 /* JD.h */; };
 		070AA47225D4792A005D8814 /* JD.m in Sources */ = {isa = PBXBuildFile; fileRef = 070AA46425C48796005D8814 /* JD.m */; };
 		4AB889351994ABC9004DC0FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB889341994ABC9004DC0FD /* Foundation.framework */; };
 		4AB889381994ABC9004DC0FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB889371994ABC9004DC0FD /* main.m */; };
@@ -287,7 +286,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AC3237E25C30AB800B3C3DB /* ODLog.m in Sources */,
-				070AA47125D47928005D8814 /* JD.h in Sources */,
 				070AA47225D4792A005D8814 /* JD.m in Sources */,
 				4AB889381994ABC9004DC0FD /* main.m in Sources */,
 				4AC3237825C2BCFD00B3C3DB /* NSTask+function.m in Sources */,
