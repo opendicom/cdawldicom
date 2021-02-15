@@ -92,7 +92,7 @@ int main(int argc, const char * argv[])
 #pragma mark - loop StudyInstanceUIDs
           
           NSString *EUID=[[[instance objectForKey:@"0020000D"]objectForKey:@"Value"]firstObject];
-          NSString *EUIDpath=[DApath stringByAppendingPathComponent:EUID];
+          NSString *EUIDpath=[[DApath stringByAppendingPathComponent:@"EUID"] stringByAppendingPathComponent:EUID];
           
           if([fileManager fileExistsAtPath:[EUIDpath stringByAppendingPathComponent:@"wl.xml"]]) continue;//WorkItem (wl.xml) already downloaded
           
@@ -115,7 +115,7 @@ int main(int argc, const char * argv[])
               else if (ANU)   ANIsuffix=[NSString stringWithFormat:@"^%@",ANU];
               else            ANIsuffix=@"";
               NSString *AN=[[[[instance objectForKey:@"00080050"]objectForKey:@"Value"]firstObject]stringByAppendingString:ANIsuffix];
-              NSString *ANpath=[DApath stringByAppendingPathComponent:AN];
+              NSString *ANpath=[[DApath stringByAppendingPathComponent:@"AN"] stringByAppendingPathComponent:AN];
               if(![fileManager fileExistsAtPath:ANpath])
               {
                   if(![fileManager createDirectoryAtPath:ANpath withIntermediateDirectories:YES attributes:nil error:nil])
@@ -139,7 +139,7 @@ int main(int argc, const char * argv[])
               if (PIDI) PIDIsuffix=[NSString stringWithFormat:@"^%@",PIDI];
               else      PIDIsuffix=@"";
               NSString *PID=[[[[instance objectForKey:@"00100020"]objectForKey:@"Value"]firstObject]stringByAppendingString:PIDIsuffix];
-              NSString *PIDpath=[DApath stringByAppendingPathComponent:PID];
+              NSString *PIDpath=[[DApath stringByAppendingPathComponent:@"PID"]stringByAppendingPathComponent:PID];
               if(![fileManager fileExistsAtPath:PIDpath])
               {
                   if(![fileManager createDirectoryAtPath:PIDpath withIntermediateDirectories:YES attributes:nil error:nil])

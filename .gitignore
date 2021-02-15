@@ -1,3 +1,4 @@
 
-*.DS_Store
 cdawldicom.xcodeproj/project.xcworkspace/xcuserdata/*
+.DS_Store
+cdawldicom.xcodeproj/xcuserdata/*
